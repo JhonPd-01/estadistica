@@ -1,0 +1,80 @@
+Análisis de Requerimientos del Software de Pronóstico de Atenciones y Laboratorios
+1. Introducción
+El presente documento detalla los requerimientos funcionales y no funcionales del software para la proyección y monitoreo de atenciones y laboratorios en la IPS Quimiosalud SAS. Este sistema permitirá la gestión de datos de atenciones médicas, distribución de pacientes por EPS, seguimiento de cumplimiento y generación de reportes.
+2. Objetivo del Software
+Desarrollar un software que permita pronosticar atenciones y laboratorios, así como visualizar tendencias por proyección, basado en la información de atención por contrato de cada EPS en la IPS Quimiosalud SAS.
+3. Características Generales
+•	División de la información por año (inicia en febrero y finaliza en enero del siguiente año).
+•	Distribución de atenciones por semestre, asegurando que cada 6 meses se cumpla con la mitad de cada atención asignada por profesional y EPS.
+•	Agregación de nuevas EPS y modificación del número de atenciones o laboratorios contratados.
+•	Registro y actualización mensual de información sin afectar meses previos.
+•	Consolidado de proyecciones por meses y su división, además de un apartado específico para cada EPS.
+•	Restricción en la asignación de pacientes según cupos anuales de atenciones.
+•	Registro y monitoreo de cumplimiento de atenciones por especialidad y EPS.
+4. Registro de Población
+El software permitirá registrar y actualizar la población para realizar los cálculos de atenciones, incluyendo:
+•	Población total de la agencia.
+•	Población total EPS activa.
+•	Mujeres en edad fértil.
+•	Gestantes.
+•	Adultos.
+•	Pediátricos con diagnóstico.
+•	Menores en seguimiento.
+5. Registro y Pronóstico Mensual
+•	Registro y almacenamiento de información por mes.
+•	Actualización mensual de la población para reflejar cambios demográficos.
+•	Registro diario de atenciones realizadas por profesional.
+•	Proyección de atenciones faltantes y su redistribución.
+•	Cálculo del porcentaje de cumplimiento e incumplimiento con indicadores visuales: 
+o	Rojo: No se está cumpliendo con las atenciones programadas.
+o	Amarillo: Cerca de la meta de atenciones.
+o	Verde: Cumplimiento de atenciones programadas.
+•	Cálculo de atenciones según días hábiles (lunes a sábado).
+•	Ajuste dinámico de atenciones faltantes en meses siguientes.
+•	Consolidado anual de actividades proyectadas y ejecutadas.
+6. Distribución de la Población
+•	La distribución de la población se realizará en 6 meses, dejando el último mes como "mes de gabela".
+•	En los primeros 5 meses, se asignará el 19% de la población programada, dejando el restante 5% para el sexto mes.
+7. Ajuste de Atenciones Faltantes
+•	Reubicación de atenciones no realizadas en el mes siguiente.
+•	Registro del impacto de las atenciones realizadas en la programación global.
+•	Monitoreo de atenciones acumuladas y redistribución.
+8. Cálculo de Atenciones por Especialidad
+El software calculará las atenciones necesarias por especialidad según la población registrada:
+•	Médico infectólogo adultos: Población adulta.
+•	Pediatría: Población pediátrica con diagnóstico y menores en seguimiento.
+•	Psiquiatría: Población adulta.
+•	Ginecología: Mujeres en edad fértil y gestantes.
+•	Enfermería, Psicología, Nutrición, Trabajo Social, Químico: Población total EPS activa.
+•	Odontología: Población adulta.
+•	Laboratorios: Población adulta y pediátrica con diagnóstico.
+8.1 Datos Iniciales por EPS
+El software debe gestionar los siguientes datos de atenciones por EPS y permitir su modificación:
+•	Médico infectólogo adultos y pediátrico: Nueva EPS (2), Compensar (1), Familiar de Colombia (1), FOMAG (1).
+•	Médico experto: Nueva EPS (10), Compensar (11), Familiar de Colombia (11), FOMAG (11).
+•	Psiquiatría, Ginecología fértil, Psicología, Nutrición, Trabajo Social, Laboratorios: Nueva EPS (4), Compensar (4), Familiar de Colombia (4), FOMAG (4).
+•	Ginecología gestantes: Nueva EPS (8), Compensar (8), Familiar de Colombia (8), FOMAG (8).
+•	Enfermería, Químico: Nueva EPS (12), Compensar (12), Familiar de Colombia (12), FOMAG (12).
+•	Odontología: Nueva EPS (2), Compensar (2), Familiar de Colombia (2), FOMAG (2).
+9. Tecnologías Web y Base de Datos
+•	Servidor: XAMPP.
+•	Base de datos: MySQL.
+•	Backend: PHP
+•	Frontend: HTML, CSS, JavaScript,VUE.js, angular.
+•	Gráficos e indicadores: Chart.js o D3.js.
+•	Reportes y exportación: Excel y PDF.
+•	Seguridad: Cifrado de datos y control de sesiones.
+10. Funcionalidades Adicionales
+•	Interfaz intuitiva.
+•	Reportes y gráficos interactivos.
+•	Exportación de datos en Excel y PDF.
+•	Cálculo automático de atenciones por mes y EPS.
+•	Consolidado de proyecciones y distribución.
+•	Análisis de cumplimiento anual.
+Este documento detalla los lineamientos para el desarrollo e implementación del software de pronóstico de atenciones y laboratorios.
+
+
+Notas en los laboratorio no dsglosces por parámetros 
+Dame el código completo para usar en mi escritorio 
+La base de datos la tengo local solo me darás la creación y crearas las ocnexiones para cuando se despliegue en mi servidor local use las bd de data para generar todo 
+Realiza el software de completo con funcionalidades y todas los boetnes, pagines, informes funcional
